@@ -1,0 +1,482 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* my style */
+
+body {
+  font: 16px/28px arial, sans-serif;
+  color: #333;
+  background-color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 960px;
+  margin: auto;
+  background-color: seashell;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+header h1 a {
+  text-decoration: none;
+  color: #333;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+nav ul {
+  display: flex;
+  transition: all 0.4s;
+}
+
+nav ul li {
+  /* display: inline-block; */
+  list-style: none;
+  margin-right: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: darkred;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: rgb(226, 0, 0);
+}
+
+nav .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
+  position: relative;
+  display: none;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  top: -5px;
+  left: -10px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 1s;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, 0);
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+/* .menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+} */
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: rotate(90deg) translate(-6px, 0);
+}
+.menu-toggle span:nth-child(3) {
+  transform-origin: 30%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.img {
+  background-image: url(img/makima-chainsaw-man-opening-8k-wallpaper-uhdpaper.com-771@1@i.jpg);
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  /* border-top: 5px solid lightsalmon;
+  border-bottom: 5px solid lightsalmon; */
+  box-shadow: 0px 4px 2px -1px lightsalmon, 0px -4px 2px -1px lightsalmon;
+}
+
+.bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: tomato;
+  animation: progress-horizontal;
+  animation-timeline: scroll();
+  transform-origin: 0%;
+}
+
+.img:hover {
+  box-shadow: inset 5px 5px 2px 5px rgba(0, 0, 0, 0.4), inset -5px -5px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.isi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artikel {
+  width: 500px;
+  padding: 10px;
+  /* float: left; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.artikel .judul,
+.photos .judul_gallery {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.artikel .penulis {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.penulis a {
+  text-decoration: none;
+  color: darkred;
+  padding: 3px;
+}
+
+.penulis a:hover {
+  background-color: lightcoral;
+  color: white;
+}
+
+.artikel p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.artikel .satu {
+  text-indent: 50px;
+}
+
+.photos {
+  width: 200px;
+  margin: 15px;
+  /* border-left: 2px solid lightsalmon; */
+  /* float: right; */
+  text-align: center;
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; */
+}
+
+.photos li,
+.photos span,
+.photos a img {
+  border-radius: 50%;
+}
+
+.photos ul li {
+  display: inline-block;
+  position: relative;
+  margin: 20px 10px;
+  width: 120px;
+  height: 120px;
+  border: 5px solid black;
+  box-shadow: 0px 20px 3px -10px rgba(0, 0, 0, 0.75);
+}
+
+li:has(span:hover) {
+  box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.75);
+  transition: 400ms;
+}
+
+.photos span {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 25px;
+  color: lightsalmon;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  opacity: 0;
+}
+
+.photos a:hover span {
+  opacity: 1;
+  animation: showspan 300ms;
+}
+
+.overlay img {
+  max-height: 100%;
+  opacity: 0;
+  border-radius: 10px;
+}
+.overlay {
+  width: 0;
+  height: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 120px 0;
+  z-index: 999;
+  transition: 1s;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay:target img {
+  opacity: 1;
+  transition: 700ms;
+}
+
+.overlay .kiri,
+.overlay .kanan {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  margin-left: 50px;
+}
+
+.overlay .kiri {
+  margin-left: -100px;
+}
+
+.overlay .btnclose {
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  left: 50%;
+  color: white;
+  margin-top: 80px;
+  margin-left: -30px;
+  background-color: rgba(red, green, blue, alpha);
+  text-shadow: 1px 1px 5px black;
+  opacity: 0;
+}
+
+.overlay .btnclose:hover {
+  font-weight: bold;
+}
+
+.overlay:target .btnclose {
+  animation: slideDownandFade 0.5s 0.5s forwards;
+}
+
+footer {
+  background-color: lightsalmon;
+  padding: 15px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 15px;
+  color: #333;
+}
+.cf:before,
+.cf:after {
+  content: ' '; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* animasi */
+
+@keyframes showspan {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes slideDownandFade {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes progress-horizontal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .artikel {
+    max-width: 500px;
+  }
+
+  .photos {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: seashell;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  nav .slide {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  nav .menu-toggle {
+    display: flex;
+  }
+}

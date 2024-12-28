@@ -88,15 +88,13 @@ video {
 }
 
 /* my style */
-body,
-html {
-  overflow-x: hidden;
-}
+
 body {
   font: 16px/28px arial, sans-serif;
   color: #333;
   background-color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 main {

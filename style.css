@@ -461,7 +461,7 @@ footer p {
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 69%;
     height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
@@ -478,5 +478,22 @@ footer p {
 
   nav .menu-toggle {
     display: flex;
+  }
+
+  .overlay .btnclose {
+    top: 15%;
+  }
+  .overlay img {
+    max-height: calc(45% + 2rem);
+    align-items: center;
+    margin-top: 150px;
+  }
+  .overlay .kiri,
+  .overlay .kanan {
+    margin-left: 20px;
+  }
+
+  .overlay .kiri {
+    margin-left: -40px;
   }
 }

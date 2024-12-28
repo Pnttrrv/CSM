@@ -277,7 +277,7 @@ nav .menu-toggle {
 }
 
 .photos {
-  width: 200px;
+  max-width: 200px;
   margin: 15px;
   /* border-left: 2px solid lightsalmon; */
   /* float: right; */

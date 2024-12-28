@@ -474,9 +474,9 @@ footer p {
   }
 
   nav .slide {
-    display: flex;
     opacity: 1;
     transform: translate(0);
+    display: flex;
   }
 
   nav .menu-toggle {

@@ -95,7 +95,6 @@ body {
   background-color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  max-width: 100%vw;
 }
 
 main {
